@@ -725,6 +725,10 @@ uis.controller('uiSelectCtrl',
   };
 
   ctrl.clear = function($event) {
+    
+    // Reset current index.
+    ctrl.activeIndex = -1;
+    
     ctrl.select(undefined);
     $event.stopPropagation();
     $timeout(function() {
